@@ -10,12 +10,14 @@ struct Carta {
     float area;
     float pib;
     int turistico;
+
 };
 
 int main(){
     // comando de estrutura para organizar a coleta de dados
     struct Carta carta1, carta2;
-    
+    float densidade1, densidade2;
+    float pibpercapita1, pibpercapita2;
 
     // imprime o titulo 1
     printf("Carta1\n");
@@ -47,6 +49,14 @@ int main(){
     // Imprime ponto turistico
     printf("Qual o numero de ponto turistico: ");
     scanf("%d", &carta1.turistico); // Permite ler o ponto turistico
+
+    // // cálculo da densidade populacional
+    densidade1 = carta1.populacao / carta1.area;
+    printf("Densidade populacional: %.2f habitantes/km²\n", densidade1);
+
+    // cálculo do PIB per capita
+    pibpercapita1 = carta1.pib / carta1.populacao;
+    printf("PIB per capita: %f\n", pibpercapita1);
 
     printf("\n"); // epaço extra
 
@@ -80,5 +90,15 @@ int main(){
     // imprime ponto turistico
     printf("Qual o numero de ponto turistico: ");
     scanf("%d", &carta2.turistico); // Permite ler o ponto turistico
+
+    // // cálculo da densidade populacional
+    densidade2 = carta2.populacao / carta2.area;
+    printf("Densidade populacional: %.2f habitantes/km²\n", densidade2);
+
+    // cálculo do PIB per capita
+    pibpercapita2 = carta2.pib / carta2.populacao;
+    printf("PIB per capita: %f\n", pibpercapita2);
+
+    
 
 }
